@@ -1,7 +1,7 @@
 # GitHub Action: Format Code with Prettier
 
-![GitHub Marketplace Version](https://img.shields.io/github/v/release/adhikareeprayush@gmail.com/format-code?label=Version&logo=github)
-![GitHub Marketplace Downloads](https://img.shields.io/github/downloads/adhikareeprayush/format-code/total?label=Downloads&logo=github)
+![GitHub Marketplace Version](https://img.shields.io/github/v/release/adhikareeprayush/format-code?label=Version&logo=github)
+![GitHub Releases](https://img.shields.io/github/downloads/adhikareeprayush/format-code/total?label=Downloads&logo=github)
 ![GitHub Marketplace Stars](https://img.shields.io/github/stars/adhikareeprayush/format-code?label=Stars&logo=github)
 ![GitHub License](https://img.shields.io/github/license/adhikareeprayush/format-code?label=License)
 
