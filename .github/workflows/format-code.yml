@@ -22,7 +22,7 @@ jobs:
         run: prettier --version
 
       - name: Debug Prettier command
-        run: npx prettier --config .prettierrc --write "index.js"
+        run: npx prettier --config .prettierrc --write "."
 
       - name: Run Prettier
         run: prettier --write "."
