@@ -1,35 +1,35 @@
 name: Format Code
 
-on: [push,pull_request]
+on: [push, pull_request]
 
 jobs:
-    format:
-        runs-on: ubuntu-latest
+  format:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-            - name: Set up Node.js
-              uses: actions/setup-node@v3
-              with:
-                node-version: '20'
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
 
-            - name: Install dependencies
-              run: npm install
+      - name: Install Prettier
+        run: npm install --global prettier
 
-            - name: Verify Prettier installation
-              run: npx prettier --version
-      
-            - name: Run Prettier
-              run: npx prettier --write .
+      - name: Verify Prettier installation
+        run: prettier --version
 
-            - name: Commit changes
-              run: |
-                git config --global user.email "github-actions[bot]@users.noreply.github.com"
-                git config --global user.name "github-actions[bot]"
-                git add .
-                git commit -m "Format code"
-              env:
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              continue-on-error: true
+      - name: Run Prettier
+        run: prettier --write "."
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m 'Format code with Prettier'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
