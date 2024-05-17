@@ -21,6 +21,9 @@ jobs:
       - name: Verify Prettier installation
         run: prettier --version
 
+      - name: Debug Prettier command
+        run: npx prettier --config .prettierrc --write "index.js"
+        
       - name: Run Prettier
         run: prettier --write "."
 
