@@ -23,7 +23,7 @@ jobs:
 
       - name: Debug Prettier command
         run: npx prettier --config .prettierrc --write "index.js"
-        
+
       - name: Run Prettier
         run: prettier --write "."
 
@@ -33,6 +33,7 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add .
           git commit -m 'Format code with Prettier'
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
