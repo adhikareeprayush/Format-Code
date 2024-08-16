@@ -19,7 +19,7 @@ To use this GitHub Action in your workflow, add a step like the following:
 
 ```yaml
 - name: Format Code with Prettier
-  uses: adhikareeprayush/format-code@v1
+  uses: adhikareeprayush/Format-Code@v1
 ```
 
 You can configure additional options for Prettier by creating a `.prettierrc` or `prettier.config.js` file in your repository.
