@@ -1,6 +1,7 @@
 name: Format Code
 
-on: [push, pull_request]
+on:
+  workflow_call:
 
 jobs:
   format:
@@ -20,9 +21,6 @@ jobs:
 
       - name: Verify Prettier installation
         run: prettier --version
-
-      - name: Debug Prettier command
-        run: npx prettier --config .prettierrc --write "."
 
       - name: Run Prettier
         run: prettier --write "."
